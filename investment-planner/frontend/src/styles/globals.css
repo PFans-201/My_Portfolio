@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme - Professional and appealing */
+  --background-light: #f0f4f8;
+  --text-light: #2d3748;
+  --nav-bg-light: rgba(255, 255, 255, 0.95);
+  --nav-border-light: #e2e8f0;
+  --nav-hover-light: rgba(226, 232, 240, 0.95);
+  --link-color-light: #3182ce;
+  --link-hover-light: #2c5282;
+  --card-bg-light: #ffffff;
+  --card-border-light: #e2e8f0;
+  --card-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  /* Dark theme - Easy on the eyes with a subtle pop of color */
+  --background-dark: #0d0e0f;
+  --text-dark: #e2e8f0;
+  --nav-bg-dark: rgba(26, 32, 44, 0.95);
+  --nav-border-dark: #2d3748;
+  --nav-hover-dark: rgba(45, 55, 72, 0.95);
+  --link-color-dark: #63b3ed;
+  --link-hover-dark: #4299e1;
+  --card-bg-dark: #2d3748;
+  --card-border-dark: #4a5568;
+  --card-shadow-dark: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+  /* Zen theme - Comfortable, mostly grayscale */
+  --background-zen: #f7f7f7;
+  --text-zen: #4a5568;
+  --nav-bg-zen: rgba(247, 247, 247, 0.95);
+  --nav-border-zen: #e2e2e2;
+  --nav-hover-zen: rgba(226, 226, 226, 0.95);
+  --link-color-zen: #718096;
+  --link-hover-zen: #4a5568;
+  --card-bg-zen: #ffffff;
+  --card-border-zen: #e2e2e2;
+  --card-shadow-zen: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  /* Default theme */
+  --background-color: var(--background-light);
+  --text-color: var(--text-light);
+  --nav-bg: var(--nav-bg-light);
+  --nav-border: var(--nav-border-light);
+  --nav-hover: var(--nav-hover-light);
+  --link-color: var(--link-color-light);
+  --link-hover: var(--link-hover-light);
+  --card-bg: var(--card-bg-light);
+  --card-border: var(--card-border-light);
+  --card-shadow: var(--card-shadow-light);
+
+  /* Button styles */
+  --button-background: var(--primary-color);
+  --button-text: #ffffff;
+  --button-hover: var(--primary-color-dark);
+
+  /* TextField styles */
+  --textfield-border: var(--border-color);
+  --textfield-label: var(--text-color);
+  --textfield-focus: var(--primary-color);
+
+}
+
+[data-theme='light'] {
+  --background-color: var(--background-light);
+  --text-color: var(--text-light);
+  --nav-bg: var(--nav-bg-light);
+  --nav-border: var(--nav-border-light);
+  --nav-hover: var(--nav-hover-light);
+  --link-color: var(--link-color-light);
+  --link-hover: var(--link-hover-light);
+  --card-bg: var(--card-bg-light);
+  --card-border: var(--card-border-light);
+  --card-shadow: var(--card-shadow-light);
+}
+
+[data-theme='dark'] {
+  --background-color: var(--background-dark);
+  --text-color: var(--text-dark);
+  --nav-bg: var(--nav-bg-dark);
+  --nav-border: var(--nav-border-dark);
+  --nav-hover: var(--nav-hover-dark);
+  --link-color: var(--link-color-dark);
+  --link-hover: var(--link-hover-dark);
+  --card-bg: var(--card-bg-dark);
+  --card-border: var(--card-border-dark);
+  --card-shadow: var(--card-shadow-dark);
+}
+
+[data-theme='zen'] {
+  --background-color: var(--background-zen);
+  --text-color: var(--text-zen);
+  --nav-bg: var(--nav-bg-zen);
+  --nav-border: var(--nav-border-zen);
+  --nav-hover: var(--nav-hover-zen);
+  --link-color: var(--link-color-zen);
+  --link-hover: var(--link-hover-zen);
+  --card-bg: var(--card-bg-zen);
+  --card-border: var(--card-border-zen);
+  --card-shadow: var(--card-shadow-zen);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Oswald', sans-serif;
+}
+
+p {
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+nav {
+  background-color: var(--nav-bg);
+  border-bottom: var(--nav-border);
+}
+
+footer {
+  background-color: var(--nav-bg);
+  border-top: var(--nav-border);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /*maybe diferent text color*/
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+/* Button styles */
+.MuiButton-root {
+  background-color: var(--button-background);
+  color: var(--button-text);
+}
+
+.MuiButton-root:hover {
+  background-color: var(--button-hover);
+}
+
+/* TextField styles */
+.MuiTextField-root {
+  border-color: var(--textfield-border);
+}
+
+.MuiInputLabel-root {
+  color: var(--textfield-label);
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--textfield-focus);
+}
