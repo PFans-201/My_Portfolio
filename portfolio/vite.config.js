@@ -9,12 +9,18 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
   server: {
-    open: false,
-    host: true, // Allows access on the local network
+    open: false, // Prevent Vite from trying to open the browser automatically
+    allowedHosts: ['pfanica.com', 'invest.pfanica.com', 'localhost', '0.0.0.0'],
+    // Enable access from the network
+    host: '0.0.0.0', // This allows access from any network, change if more restrictive behavior is needed
     port: 3000,  // Adjust for each frontend project
     watch: {
       usePolling: true, // Ensures file changes in Docker volumes are detected
       ignored: ['**/node_modules/**'], // Ignore unnecessary files
+      
+    },
+    hmr: {
+      clientPort: 80, // This is crucial for HMR through Nginx
     },
   },
   build: {
