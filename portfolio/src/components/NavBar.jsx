@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import NavItem from './NavItem';
 import { ThemeContext } from './ThemeContext';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import navigationConfig from '../config/routes.config'; //has the path's for each page
-import ThemeToggle from './ThemeToggle'; //has the light, dark and zen mode toggle
+import navigationConfig from '@/config/routes.config'; // Contains my nav paths
+import ThemeToggle from './ThemeToggle';
 
 const NavBar = () => {
   const { theme } = useContext(ThemeContext);
@@ -28,7 +26,13 @@ const NavBar = () => {
   const navItems = navigationConfig.getMainNav();
 
   return (
-    <nav className={`fixed w-full ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'} transition-all duration-300`}>
+    <nav
+      className={`fixed w-full ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'} transition-all duration-300`}
+      style={{
+        backgroundColor: `var(--nav-bg-${theme})`,
+        color: `var(--text-color)`,
+      }}
+    >
       <div className="container mx-auto flex items-center justify-between p-4">
         <div className="flex items-center">
           <div className="hidden md:flex space-x-4">
@@ -41,7 +45,7 @@ const NavBar = () => {
           <ThemeToggle />
           <div className="md:hidden ml-4">
             <button onClick={toggleMenu}>
-              {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>

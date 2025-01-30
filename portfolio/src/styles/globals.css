@@ -4,40 +4,58 @@
 
 :root {
   /* Light theme - Professional and appealing */
-  --background-light: #f0f4f8;
-  --text-light: #2d3748;
+  --background-light: #f8f9fa;
+  --text-light: #333333;
   --nav-bg-light: rgba(255, 255, 255, 0.95);
-  --nav-border-light: #e2e8f0;
-  --nav-hover-light: rgba(226, 232, 240, 0.95);
-  --link-color-light: #3182ce;
-  --link-hover-light: #2c5282;
+  --nav-border-light: #e9ecef;
+  --nav-hover-light: rgba(233, 236, 239, 0.95);
+  --link-color-light: #007bff;
+  --link-hover-light: #0056b3;
   --card-bg-light: #ffffff;
-  --card-border-light: #e2e8f0;
+  --card-border-light: #dee2e6;
   --card-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --primary-color-light: #007bff;
+  --secondary-color-light: #6c757d;
+  --h1-color-light: #212529;
+  --h2-color-light: #343a40;
+  --h3-color-light: #495057;
+  --p-color-light: #495057;
 
   /* Dark theme - Easy on the eyes with a subtle pop of color */
-  --background-dark: #0d0e0f;
-  --text-dark: #e2e8f0;
-  --nav-bg-dark: rgba(26, 32, 44, 0.95);
-  --nav-border-dark: #2d3748;
-  --nav-hover-dark: rgba(45, 55, 72, 0.95);
-  --link-color-dark: #63b3ed;
-  --link-hover-dark: #4299e1;
-  --card-bg-dark: #2d3748;
-  --card-border-dark: #4a5568;
-  --card-shadow-dark: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --background-dark: #121212;
+  --text-dark: #e0e0e0;
+  --nav-bg-dark: rgba(18, 18, 18, 0.95);
+  --nav-border-dark: #333333;
+  --nav-hover-dark: rgba(38, 38, 38, 0.95);
+  --link-color-dark: #4dabf7;
+  --link-hover-dark: #74c0fc;
+  --card-bg-dark: #1e1e1e;
+  --card-border-dark: #333333;
+  --card-shadow-dark: 0 1px 3px rgba(0, 0, 0, 0.464);
+  --primary-color-dark: #4dabf7;
+  --secondary-color-dark: #868e96;
+  --h1-color-dark: #f8f9fa;
+  --h2-color-dark: #e9ecef;
+  --h3-color-dark: #dee2e6;
+  --p-color-dark: #ced4da;
 
   /* Zen theme - Comfortable, mostly grayscale */
-  --background-zen: #f7f7f7;
-  --text-zen: #4a5568;
-  --nav-bg-zen: rgba(247, 247, 247, 0.95);
-  --nav-border-zen: #e2e2e2;
-  --nav-hover-zen: rgba(226, 226, 226, 0.95);
-  --link-color-zen: #718096;
-  --link-hover-zen: #4a5568;
+  --background-zen: #f5f5f5;
+  --text-zen: #333333;
+  --nav-bg-zen: rgba(245, 245, 245, 0.95);
+  --nav-border-zen: #e0e0e0;
+  --nav-hover-zen: rgba(224, 224, 224, 0.95);
+  --link-color-zen: #616161;
+  --link-hover-zen: #424242;
   --card-bg-zen: #ffffff;
-  --card-border-zen: #e2e2e2;
+  --card-border-zen: #e0e0e0;
   --card-shadow-zen: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --primary-color-zen: #757575;
+  --secondary-color-zen: #9e9e9e;
+  --h1-color-zen: #212121;
+  --h2-color-zen: #424242;
+  --h3-color-zen: #616161;
+  --p-color-zen: #757575;
 
   /* Default theme */
   --background-color: var(--background-light);
@@ -50,17 +68,25 @@
   --card-bg: var(--card-bg-light);
   --card-border: var(--card-border-light);
   --card-shadow: var(--card-shadow-light);
+  --primary-color: var(--primary-color-light);
+  --secondary-color: var(--secondary-color-light);
+  --h1-color: var(--h1-color-light);
+  --h2-color: var(--h2-color-light);
+  --h3-color: var(--h3-color-light);
+  --p-color: var(--p-color-light);
 
   /* Button styles */
-  --button-background: var(--primary-color);
-  --button-text: #ffffff;
-  --button-hover: var(--primary-color-dark);
+  --button-primary-bg: var(--primary-color);
+  --button-primary-text: #ffffff;
+  --button-primary-hover: var(--link-hover);
+  --button-secondary-bg: var(--secondary-color);
+  --button-secondary-text: #ffffff;
+  --button-secondary-hover: #5a6268;
 
   /* TextField styles */
-  --textfield-border: var(--border-color);
+  --textfield-border: var(--card-border);
   --textfield-label: var(--text-color);
   --textfield-focus: var(--primary-color);
-
 }
 
 [data-theme='light'] {
@@ -74,6 +100,12 @@
   --card-bg: var(--card-bg-light);
   --card-border: var(--card-border-light);
   --card-shadow: var(--card-shadow-light);
+  --primary-color: var(--primary-color-light);
+  --secondary-color: var(--secondary-color-light);
+  --h1-color: var(--h1-color-light);
+  --h2-color: var(--h2-color-light);
+  --h3-color: var(--h3-color-light);
+  --p-color: var(--p-color-light);
 }
 
 [data-theme='dark'] {
@@ -87,6 +119,12 @@
   --card-bg: var(--card-bg-dark);
   --card-border: var(--card-border-dark);
   --card-shadow: var(--card-shadow-dark);
+  --primary-color: var(--primary-color-dark);
+  --secondary-color: var(--secondary-color-dark);
+  --h1-color: var(--h1-color-dark);
+  --h2-color: var(--h2-color-dark);
+  --h3-color: var(--h3-color-dark);
+  --p-color: var(--p-color-dark);
 }
 
 [data-theme='zen'] {
@@ -100,18 +138,46 @@
   --card-bg: var(--card-bg-zen);
   --card-border: var(--card-border-zen);
   --card-shadow: var(--card-shadow-zen);
+  --primary-color: var(--primary-color-zen);
+  --secondary-color: var(--secondary-color-zen);
+  --h1-color: var(--h1-color-zen);
+  --h2-color: var(--h2-color-zen);
+  --h3-color: var(--h3-color-zen);
+  --p-color: var(--p-color-zen);
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  color: var(--h1-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: var(--h2-color);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  color: var(--h3-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 p {
+  color: var(--p-color);
   font-size: 1rem;
-  font-family: 'Arial', sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 1rem;
 }
 
@@ -127,12 +193,16 @@ a:hover {
 
 nav {
   background-color: var(--nav-bg);
-  border-bottom: var(--nav-border);
+  border-bottom: 1px solid var(--nav-border);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 footer {
   background-color: var(--nav-bg);
-  border-top: var(--nav-border);
+  border-top: 1px solid var(--nav-border);
 }
 
 .card {
@@ -142,42 +212,79 @@ footer {
   box-shadow: var(--card-shadow);
   padding: 1.5rem;
   margin-bottom: 1rem;
-  font-family: 'Arial', sans-serif;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  /*maybe diferent text color*/
+  position: relative;
+  z-index: 1;
 }
 
 .card:hover {
   transform: translateY(-2px);
   box-shadow: var(--card-shadow), 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
-#portfolio-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-color);
-  margin-bottom: 1rem;
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Button styles */
-.MuiButton-root {
-  background-color: var(--button-background);
-  color: var(--button-text);
+button.primary {
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
 }
 
-.MuiButton-root:hover {
-  background-color: var(--button-hover);
+button.primary:hover {
+  background-color: var(--button-primary-hover);
 }
 
-/* TextField styles */
-.MuiTextField-root {
-  border-color: var(--textfield-border);
+button.secondary {
+  background-color: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
 }
 
-.MuiInputLabel-root {
-  color: var(--textfield-label);
+button.secondary:hover {
+  background-color: var(--button-secondary-hover);
 }
 
-.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: var(--textfield-focus);
+.navbar a:hover {
+  text-decoration: none;
+  color: var(--link-hover);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: fill 0.2s ease;
+}
+
+.round-icon {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Maintain equal width & height for a perfect circle */
+  border-radius: 50%; /* Makes it a perfect circle */
+  background-color: var(--card-bg); /* Same background as the card */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--card-shadow); /* Optional: keeps it consistent with the card */
+}
+
+a:hover .icon {
+  fill: var(--link-hover);
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }

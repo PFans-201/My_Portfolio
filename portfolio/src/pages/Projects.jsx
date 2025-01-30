@@ -9,19 +9,7 @@ import ProjectCard from '@/components/ProjectCard';
           title="Investment Strategy Planner"
           description="Advanced tool for planning and analyzing investment strategies using ML"
           image="/api/placeholder/400/300"
-          setCurrentPage={setCurrentPage}
-        />
-        <ProjectCard
-          title="E-commerce Platform"
-          description="Full-stack e-commerce solution with React and Node.js"
-          image="/api/placeholder/400/300"
-          setCurrentPage={setCurrentPage}
-        />
-        <ProjectCard
-          title="AI Image Generator"
-          description="Deep learning model for generating artistic images"
-          image="/api/placeholder/400/300"
-          setCurrentPage={setCurrentPage}
+          URL= "http://invest.pfanica.com"
         />
       </div>
     </div>

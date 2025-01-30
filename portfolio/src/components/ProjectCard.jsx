@@ -1,26 +1,34 @@
 import React from 'react';
-import { Button } from '@mui/material';
-import { Card, CardHeader, CardContent } from '@mui/material';
+import Button from './Button';
+import Card from './Card';
 
-const ProjectCard = ({ title, description, image, setCurrentPage }) => (
-    <Card 
-      className="card overflow-hidden hover:shadow-lg transition-shadow dark:bg-gray-800"
-      style={{ borderColor: 'var(--nav-border)' , backgroundColor: 'var(--nav-bg)', textColor: "--text-color" }}
-    >
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
-      <CardHeader>
-        <h3 className="text-xl font-semibold">{title}</h3>
-      </CardHeader>
-      <CardContent>
-        <p className="mb-4">{description}</p>
-        <Button 
-          onClick={() => setCurrentPage('investment-planner')}
-          className="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600"
+const ProjectCard = ({ title, description, image, URL}) => {
+    const currentDomainURL = "pfanica.com"
+    
+    return (
+        <Card 
+            image = {image}
+            title = {title}
+            description = {description}
         >
-          View Project
-        </Button>
-      </CardContent>
-    </Card>
-  );
+            <Card.Image
+                src={image}
+                alt={"Image for: " + title}
+            />
+            <Card.Title>{title}</Card.Title>
+            <Card.Text>{description}</Card.Text>
+            <a href={URL} target="_blank" rel="noopener noreferrer">
+                <Button 
+                    className="mt-4 w-full"
+                    variant="primary"
+                    size="medium"
+                >
+                     VIEW PROJECT
+                </Button>
+            </a>
+        </Card>
+    );
+    /*URL can be a subdomain (app.example.com), a path inside the current domain (example.com/app), or even an external url (https://? www.app.com)*/
+};
 
 export default ProjectCard;

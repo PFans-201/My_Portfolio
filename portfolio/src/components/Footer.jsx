@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { LinkedInIcon, GitHubIcon } from '@/icons/socialIcons';
 import { navigationConfig } from '@/config/navigation.config';
+//TODO change mui to lighter package
+
 
 const Footer = () => {
   return (
@@ -14,9 +15,9 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <Link 
               to="/contact" 
-              className="font-bold hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-lg"
+              className="font-bold transition-colors text-lg"
             >
-              GET IN TOUCH!
+              <h3>GET IN TOUCH!</h3>
             </Link>
             <p className="text-gray-600 max-w-md">
               Feel free to reach out through any of the social links or use the contact form.
@@ -26,23 +27,9 @@ const Footer = () => {
           {/* Social Links */}
           <div>
             <h3 className="font-semibold mb-4">SOCIAL LINKS</h3>
-            <div className = 'flex space-x-6'>
-              <a 
-                href="https://www.linkedin.com/in/pedro-fanica" 
-                className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <LinkedInIcon fontSize="large"/>
-              </a>
-              <a 
-                href="https://github.com/PFans-201/My_Portfolio" 
-                className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon fontSize="large"/>
-              </a>
+            <div className = 'flex justify-center space-x-4 mb-12'>
+                <LinkedInIcon/>
+                <GitHubIcon/>
             </div>
           </div>
         </div>
@@ -65,7 +52,6 @@ const Footer = () => {
               </React.Fragment>
             ))}
           </div>
-
           {/* Copyright */}
           <div className="text-gray-600">
             Copyright © {new Date().getFullYear()} Pedro Fanica - All rights reserved.
